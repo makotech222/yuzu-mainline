@@ -695,6 +695,7 @@ void Memory::SetCurrentPageTable(Kernel::Process& process) {
 
 void Memory::MapMemoryRegion(Common::PageTable& page_table, VAddr base, u64 size, PAddr target) {
     impl->MapMemoryRegion(page_table, base, size, target);
+    //LOG_INFO(HW_Memory, "---------------- 0x{:016X}", base);
 }
 
 void Memory::MapIoRegion(Common::PageTable& page_table, VAddr base, u64 size,
